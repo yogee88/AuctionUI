@@ -1,0 +1,26 @@
+<div class="fluid-container">
+    <div class="row">
+        <div class="col" style="text-align: center;">
+            <h3>Products</h3>
+        </div>
+    </div>
+    <hr/>
+    <br/>
+    <div class="row" *ngIf="isProductsAvailable">
+        <div class="col" *ngFor="let product of productdata">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.name}}</h5>
+                  <p class="card-text">{{product.shortDescription}} - {{product.detailedDescription}}</p>
+                  <a href="#" class="btn btn-primary" routerLink="/productbids/{{product.productId}}" >View Details</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="!isProductsAvailable">
+        <div class="col">
+            <h4>No Products Available for this Seller</h4>
+        </div>
+    </div>
+</div>
+

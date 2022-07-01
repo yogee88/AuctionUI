@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col" style="text-align: center;">
+      <h3>Login</h3>
+    </div>
+  </div>
+  <hr />
+  <br />
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4" style="text-align: center;">
+      <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-floating mb-3">
+          <input formControlName="emailId" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+        <br />
+        <button class="btn btn-md btn-primary btn-block" type="submit">Sign In</button>
+      </form>
+    </div>
+    <div class="col-4"></div>
+  </div>
+</div>
