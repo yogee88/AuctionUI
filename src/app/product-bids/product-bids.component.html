@@ -18,11 +18,11 @@
                     <th>Email</th>
                     <th>Mobile</th>
                 </tr>
-                <tr *ngFor="let student of product.productBids; index as i">
-                    <td>{{ student.bidAmount }}</td>
-                    <td>{{ student.name }}</td>
-                    <td>{{ student.emailId }}</td>
-                    <td>{{ student.phone }}</td>
+                <tr *ngFor="let productBid of product.productBids; index as i">
+                    <td>{{ productBid.bidAmount }}</td>
+                    <td>{{ productBid.name }}</td>
+                    <td>{{ productBid.emailId }}</td>
+                    <td>{{ productBid.phone }}</td>
                 </tr>
             </table>
         </div>
