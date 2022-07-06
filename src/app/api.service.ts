@@ -64,4 +64,12 @@ export class ApiService {
     return token != '';    
   }
   
+  postProductBids(input : any) {
+    let headers = new HttpHeaders();
+    var token =  localStorage.getItem('token') != null ? localStorage.getItem('token') : '';
+    headers = new HttpHeaders().set("Authorization", "Bearer " + token);;
+    //return this.http.get<productbid[]>(this.baseUrl + 'Seller/api/seller/AddProduct/' + productid, {headers});
+    return this.http.post<productbid>(this.baseUrl + 'Seller/api/seller/AddProduct', input, {headers}).pipe(
+    );
+  }
 }

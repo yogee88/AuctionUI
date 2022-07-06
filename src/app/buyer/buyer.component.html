@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+      <div class="col" style="text-align: center;">
+        <h3>Start your bid</h3>
+      </div>
+    </div>
+    <hr />
+    <br />
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4" style="text-align: center;">
+        <form  [formGroup]="buyerForm" (ngSubmit)="onSubmit()">
+          <div class="form-floating mb-3">
+            <input formControlName="emailId" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input formControlName="bidAmount" type="text" class="form-control" id="floatingbidAmount" placeholder="Bid Amount">
+            <label for="floatingbidAmount">Bid Amount</label>
+          </div>
+          <div class="form-floating">
+            <input formControlName="name" type="text" class="form-control" id="floatingname" placeholder="Product Name">
+            <label for="floatingname">Product Name</label>
+          </div>
+          <br />
+          <button class="btn btn-md btn-primary btn-block" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>

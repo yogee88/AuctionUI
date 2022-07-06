@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { SellerComponent } from './seller/seller.component';
 import { ProductBidsComponent } from './product-bids/product-bids.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BuyerComponent } from './buyer/buyer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     LoginComponent,
     SellerComponent,
-    ProductBidsComponent,    
+    ProductBidsComponent,
+    BuyerComponent,    
   ],
   imports: [
     BrowserModule,

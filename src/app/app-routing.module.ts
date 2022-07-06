@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SellerComponent } from './seller/seller.component';
 import { ProductBidsComponent } from './product-bids/product-bids.component';
+import { BuyerComponent } from './buyer/buyer.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'home', canActivate:[AuthGuard], component: HomeComponent },
   { path: 'products', canActivate:[AuthGuard], component: SellerComponent },
   { path: 'productbids/:id', canActivate:[AuthGuard], component: ProductBidsComponent },
+  { path: 'buyer', canActivate:[AuthGuard], component: BuyerComponent },
   { path: 'login', component: LoginComponent }  
 ];
 
